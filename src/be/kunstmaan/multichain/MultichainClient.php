@@ -465,7 +465,7 @@ class MultichainClient
      * @param null $endBlock
      * @return mixed
      */
-    public function grant($addresses, $permissions, $nativeAmount = 0, $comment = '', $commentTo = '', $startBlock = 0, $endBlock = null)
+        public function grant($addresses, $permissions, $nativeAmount = 0,$startBlock = null, $endBlock = null, $comment = null, $commentTo = null )
     {
         return $this->jsonRPCClient->execute("grant", array($addresses, $permissions, $nativeAmount, $comment, $commentTo, $startBlock, $endBlock));
     }
